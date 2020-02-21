@@ -2,8 +2,6 @@ package com.douzone.guestbook.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServlet;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +12,7 @@ import com.douzone.guestbook.repository.GuestbookRepository;
 import com.douzone.guestbook.vo.GuestbookVo;
 
 @Controller
-public class GuestbookController extends HttpServlet {
+public class GuestbookController {
 	
 	@Autowired
 	private GuestbookRepository emaillistRepository;
@@ -22,14 +20,14 @@ public class GuestbookController extends HttpServlet {
 	@RequestMapping("")
 	public String index(Model model) {
 		
-//		List<GuestbookVo> list = emaillistRepository.findAll();
-//		model.addAttribute("list", list);
+		List<GuestbookVo> list = emaillistRepository.getList();
+		model.addAttribute("list", list);
 		return "index";
 	}
 	
-	@RequestMapping(value="/add", method=RequestMethod.GET)
+	@RequestMapping(value="/delete", method=RequestMethod.GET)
 	public String add() {
-		return "add";
+		return "delete";
 	}
 //	
 //	@RequestMapping(value="/add", method=RequestMethod.POST)

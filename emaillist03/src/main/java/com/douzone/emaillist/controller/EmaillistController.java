@@ -20,12 +20,7 @@ public class EmaillistController {
 	@RequestMapping("")
 	public String index(Model model) {
 		
-		List<EmaillistVo> list = emaillistRepository.findAll();
-		System.out.println("dd");
-		for(EmaillistVo a : list) {
-			System.out.println(a);
-		}
-		
+		List<EmaillistVo> list = emaillistRepository.findAll();		
 		model.addAttribute("list", list);
 		return "index";
 	}

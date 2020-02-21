@@ -9,8 +9,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.douzone.guestbook.vo.GuestbookVo;
 
+@Repository
 public class GuestbookRepository {
 	public int delete( GuestbookVo vo ) {
 		int count = 0;
