@@ -21,6 +21,11 @@ public class EmaillistController {
 	public String index(Model model) {
 		
 		List<EmaillistVo> list = emaillistRepository.findAll();
+		System.out.println("dd");
+		for(EmaillistVo a : list) {
+			System.out.println(a);
+		}
+		
 		model.addAttribute("list", list);
 		return "index";
 	}
