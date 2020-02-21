@@ -13,9 +13,10 @@ import org.springframework.stereotype.Repository;
 
 import com.douzone.guestbook.vo.GuestbookVo;
 
+
 @Repository
 public class GuestbookRepository {
-	public int delete( GuestbookVo vo ) {
+	public int delete(Long no, String password) {
 		int count = 0;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -30,8 +31,8 @@ public class GuestbookRepository {
 				"    and password=?";
 			pstmt = conn.prepareStatement( sql );
 
-			pstmt.setLong( 1, vo.getNo() );
-			pstmt.setString( 2, vo.getPassword() );
+			pstmt.setLong(1, no);
+			pstmt.setString(2, password);
 
 			count = pstmt.executeUpdate();
 		} catch (SQLException e) {

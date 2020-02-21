@@ -5,15 +5,14 @@
 <title>방명록</title>
 </head>
 <body>
-	<form method="post" action="<%=request.getContextPath() %>/gb">
-	<input type="hidden" name="a" value="delete" />
-	<input type='hidden' name="no" value="<%=request.getParameter( "no" ) %>">
+	<form action="${pageContext.request.contextPath }/delete/${no }" method="post">
+	<input type='hidden' name="no" value="${no }">
 	<table>
 		<tr>
 			<td>비밀번호</td>
 			<td><input type="password" name="password"></td>
 			<td><input type="submit" value="확인"></td>
-			<td><a href="<%=request.getContextPath() %>/gb">메인으로 돌아가기</a></td>
+			<td><a href="${pageContext.request.contextPath }">메인으로 돌아가기</a></td>
 		</tr>
 	</table>
 	</form>
