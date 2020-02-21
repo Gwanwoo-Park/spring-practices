@@ -26,6 +26,13 @@ public class GuestbookController {
 		return "index";
 	}
 	
+	@RequestMapping(value="/add", method=RequestMethod.POST)
+	public String add(GuestbookVo vo) {
+		guestbookRepository.insert(vo);
+		
+		return "redirect:/";
+	}
+	
 	@RequestMapping(value="/delete/{no}", method=RequestMethod.GET)
 	public String delete(@PathVariable("no") Long no, Model model) {
 		model.addAttribute("no",no);

@@ -13,7 +13,6 @@ import org.springframework.stereotype.Repository;
 
 import com.douzone.guestbook.vo.GuestbookVo;
 
-
 @Repository
 public class GuestbookRepository {
 	public int delete(Long no, String password) {
