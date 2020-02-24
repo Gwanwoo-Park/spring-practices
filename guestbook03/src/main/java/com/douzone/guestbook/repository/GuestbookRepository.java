@@ -50,7 +50,7 @@ public class GuestbookRepository {
 			}
 		}
 
-		return count;		
+		return count;
 	}
 	
 	public int insert(GuestbookVo vo) {
