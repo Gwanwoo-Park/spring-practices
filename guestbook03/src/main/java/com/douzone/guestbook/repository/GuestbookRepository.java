@@ -92,7 +92,7 @@ public class GuestbookRepository {
 		return count;
 	}
 
-	public List<GuestbookVo> getList() {
+	public List<GuestbookVo> findAll() {
 		List<GuestbookVo> list = new ArrayList<GuestbookVo>();
 
 		Connection conn = null;
