@@ -17,7 +17,6 @@
 	<input type="file" name="upload-file">
 	<br><br>
 	
-	
 	<input type="submit" value="upload">
 </form>
 </body>
