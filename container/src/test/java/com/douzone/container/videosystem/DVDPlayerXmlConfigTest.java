@@ -63,9 +63,6 @@ public class DVDPlayerXmlConfigTest {
 	@Qualifier("avengersTriplepack")
 	private DVDPack dvdPack;
 	
-	
-	
-	
 	@Autowired
 	@Qualifier("dvdPlayer2")
 	private DVDPlayer player2;
