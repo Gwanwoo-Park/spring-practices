@@ -25,6 +25,7 @@ public class JavaConfigTest {
 	@Test
 	public void testJavaConfig02() {
 		ApplicationContext appContext = new AnnotationConfigApplicationContext("config.user");
+		System.out.println(appContext.getBean(User.class));
 		
 		User user = appContext.getBean(User.class);
 		assertNotNull(user);
