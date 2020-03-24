@@ -35,7 +35,7 @@ public class DVDPlayerConfig {
 	}
 
 	// 주입하기04 : 같은 타입이 생성된 경우
-	@Bean
+	@Bean(name="player04")
 	public DVDPlayer dvdPlayer04(DigitalVideoDisc dvd) {
 		DVDPlayer dvdPlayer = new DVDPlayer(dvd);
 		dvdPlayer.setDvd(dvd);

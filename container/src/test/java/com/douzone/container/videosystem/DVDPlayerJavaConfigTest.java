@@ -25,7 +25,7 @@ public class DVDPlayerJavaConfigTest {
 	
 	@Autowired
 	// @Qualifier("dvdPlayer03")	// 설정 클래스 Bean 생성 메소드 이름
-	@Qualifier("dvdPlayer04")		// @Bean의 name의 값
+	@Qualifier("player04")		// @Bean의 name의 값
 	private DVDPlayer player;
 	
 	@Test
@@ -43,5 +43,4 @@ public class DVDPlayerJavaConfigTest {
 		player.play();
 		assertEquals("Playing Movie MARVEL's Avengers", systemOutRule.getLog().replace("\r\n", "").replace("\n", ""));
 	}
-	
 }
